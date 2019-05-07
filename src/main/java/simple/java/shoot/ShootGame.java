@@ -50,15 +50,15 @@ public class ShootGame extends JPanel {
     // 静态块
     static {
         try {
-            background = ImageIO.read(new File("images/background.png"));
-            start = ImageIO.read(new File("images/start.png"));
-            pause = ImageIO.read(new File("images/pause.png"));
-            gameover = ImageIO.read(new File("images/gameover.png"));
-            airplane = ImageIO.read(new File("images/airplane.png"));
-            bee = ImageIO.read(new File("images/bee.png"));
-            bullet = ImageIO.read(new File("images/bullet.png"));
-            hero0 = ImageIO.read(new File("images/hero0.png"));
-            hero1 = ImageIO.read(new File("images/hero1.png"));
+            background = ImageIO.read(new File("src/main/images/background.png"));
+            start = ImageIO.read(new File("src/main/images/start.png"));
+            pause = ImageIO.read(new File("src/main/images/pause.png"));
+            gameover = ImageIO.read(new File("src/main/images/gameover.png"));
+            airplane = ImageIO.read(new File("src/main/images/airplane.png"));
+            bee = ImageIO.read(new File("src/main/images/bee.png"));
+            bullet = ImageIO.read(new File("src/main/images/bullet.png"));
+            hero0 = ImageIO.read(new File("src/main/images/hero0.png"));
+            hero1 = ImageIO.read(new File("src/main/images/hero1.png"));
         } catch (Exception e) {
             e.printStackTrace();
         }

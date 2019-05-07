@@ -1,56 +1,47 @@
-package simple.java.web;
+package simple.java.host;
 
 import java.net.InetAddress;
 import java.net.UnknownHostException;
 
 /**
- * <p>
- * 工具类
- * </p>
- * 2016年1月14日
- * 
- * @author <a href="http://weibo.com/u/5131020927">Q-WHai</a>
- * @see <a href="http://blog.csdn.net/lemon_tree12138">http://blog.csdn.net/lemon_tree12138</a>
- * @version 0.1.1
+ * @Description TODO
+ * @Author: Q-WHai
+ * @Date: Created in 14:15 2019/05/06
  */
-public class WebUtils {
-    
-    public static void main(String[] args) {
-        System.out.println(getALLLocalHostIP());
-    }
+public class HostUtils {
 
     /**
      * 获得本地IP地址
      * @return
      */
     public static String getLocalHostIP() {
-        String ip = "";
+        String ip;
         try {
             InetAddress address = InetAddress.getLocalHost();
             ip = address.getHostAddress();
         } catch (UnknownHostException e) {
             ip = "";
         }
-        
+
         return ip;
     }
-    
+
     /**
      * 获取本机的主机名
      * @return
      */
     public static String getLocalHostName() {
-        String name = "";
+        String name;
         try {
             InetAddress address = InetAddress.getLocalHost();
             name = address.getHostName();
         } catch (UnknownHostException e) {
             name = "";
         }
-        
+
         return name;
     }
-    
+
     /**
      * 获取本机所有的IP
      * @return
@@ -62,7 +53,7 @@ public class WebUtils {
             try {
                 InetAddress[] addresses = InetAddress.getAllByName(hostName);
                 ipSet = new String[addresses.length];
-                
+
                 for (int i = 0; i < addresses.length; i++) {
                     ipSet[i] = addresses[i].getHostAddress();
                 }
@@ -70,7 +61,7 @@ public class WebUtils {
                 ipSet = null;
             }
         }
-        
+
         return ipSet;
     }
 }

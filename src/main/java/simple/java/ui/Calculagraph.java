@@ -1,4 +1,4 @@
-package org.demo.ui;
+package simple.java.ui;
 
 import java.awt.Color;
 import javax.swing.JFrame;

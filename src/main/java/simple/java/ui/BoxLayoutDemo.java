@@ -1,4 +1,4 @@
-package org.demo.ui;
+package simple.java.ui;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;

@@ -1,7 +1,7 @@
 # priority  : ALL < DEBUG < INFO < WARN < ERROR < FATAL < OFF
 # you cannot specify every priority with different file for log4j
-# log4j.rootLogger = [ level ] , appenderName1, appenderName2, ¡­
-log4j.rootLogger=debug,stdout,info,warn,error,trace
+# log4j.rootLogger = [ level ] , appenderName1, appenderName2, â€¦
+log4j.rootLogger=debug,stdout,info,debug,warn,error,trace
 
 # console
 log4j.appender.stdout = org.apache.log4j.ConsoleAppender
@@ -11,31 +11,31 @@ log4j.appender.stdout.layout.ConversionPattern = [%d{yyyy-MM-dd HH:mm:ss a}]:[%p
 # info log
 log4j.logger.info = info
 log4j.appender.info = org.apache.log4j.DailyRollingFileAppender
-# yyyy-MM:          Ã¿ÔÂ¹ö¶¯Ò»´ÎÎÄ¼þ£¬¼´Ã¿ÔÂ²úÉúÒ»¸öÐÂµÄÎÄ¼þ
-# yyyy-ww:          Ã¿ÖÜ¹ö¶¯Ò»´ÎÎÄ¼þ£¬¼´Ã¿ÖÜ²úÉúÒ»¸öÐÂµÄÎÄ¼þ
-# yyyy-MM-dd:       Ã¿Ìì¹ö¶¯Ò»´ÎÎÄ¼þ£¬¼´Ã¿Ìì²úÉúÒ»¸öÐÂµÄÎÄ¼þ
-# yyyy-MM-dd-a:     Ã¿Ìì¹ö¶¯Á½´ÎÎÄ¼þ£¬¼´Ã¿Ìì²úÉúÁ½¸öÐÂµÄÎÄ¼þ
-# yyyy-MM-dd-HH:    Ã¿Ð¡Ê±¹ö¶¯Ò»´ÎÎÄ¼þ
-# yyyy-MM-dd-HH-mm: Ã¿·ÖÖÓ¹ö¶¯Ò»´ÎÎÄ¼þ
+# yyyy-MM:          æ¯æœˆæ»šåŠ¨ä¸€æ¬¡æ–‡ä»¶ï¼Œå³æ¯æœˆäº§ç”Ÿä¸€ä¸ªæ–°çš„æ–‡ä»¶
+# yyyy-ww:          æ¯å‘¨æ»šåŠ¨ä¸€æ¬¡æ–‡ä»¶ï¼Œå³æ¯å‘¨äº§ç”Ÿä¸€ä¸ªæ–°çš„æ–‡ä»¶
+# yyyy-MM-dd:       æ¯å¤©æ»šåŠ¨ä¸€æ¬¡æ–‡ä»¶ï¼Œå³æ¯å¤©äº§ç”Ÿä¸€ä¸ªæ–°çš„æ–‡ä»¶
+# yyyy-MM-dd-a:     æ¯å¤©æ»šåŠ¨ä¸¤æ¬¡æ–‡ä»¶ï¼Œå³æ¯å¤©äº§ç”Ÿä¸¤ä¸ªæ–°çš„æ–‡ä»¶
+# yyyy-MM-dd-HH:    æ¯å°æ—¶æ»šåŠ¨ä¸€æ¬¡æ–‡ä»¶
+# yyyy-MM-dd-HH-mm: æ¯åˆ†é’Ÿæ»šåŠ¨ä¸€æ¬¡æ–‡ä»¶
 log4j.appender.info.DatePattern = '_'yyyy-MM-dd'.log'
-# Ö¸¶¨ÏûÏ¢Êä³öµ½logÎÄ¼þ
+# æŒ‡å®šæ¶ˆæ¯è¾“å‡ºåˆ°logæ–‡ä»¶
 log4j.appender.info.File = H:/2/info.log
-# Ä¬ÈÏÖµÊÇtrue,¼´½«ÏûÏ¢Ôö¼Óµ½Ö¸¶¨ÎÄ¼þÖÐ£¬falseÖ¸½«ÏûÏ¢¸²¸ÇÖ¸¶¨µÄÎÄ¼þÄÚÈÝ
+# é»˜è®¤å€¼æ˜¯true,å³å°†æ¶ˆæ¯å¢žåŠ åˆ°æŒ‡å®šæ–‡ä»¶ä¸­ï¼ŒfalseæŒ‡å°†æ¶ˆæ¯è¦†ç›–æŒ‡å®šçš„æ–‡ä»¶å†…å®¹
 log4j.appender.info.Append = true
-# Ö¸¶¨ÈÕÖ¾ÏûÏ¢µÄÊä³ö×îµÍ²ã´Î
+# æŒ‡å®šæ—¥å¿—æ¶ˆæ¯çš„è¾“å‡ºæœ€ä½Žå±‚æ¬¡
 log4j.appender.info.Threshold = INFO
 log4j.appender.info.layout = org.apache.log4j.PatternLayout
-log4j.appender.info.layout.ConversionPattern = [%d{yyyy-MM-dd HH:mm:ss a}]:[%p] [Thread: %t] %m%n
+log4j.appender.info.layout.ConversionPattern = %d{yyyy-MM-dd HH:mm:ss a} [Thread: %t][ Class:%c >> Method: %l ]%n%p:%m%n
 
 # debug log
-log4j.logger.debug = debug
-log4j.appender.debug = org.apache.log4j.DailyRollingFileAppender
-log4j.appender.debug.DatePattern = '_'yyyy-MM-dd'.log'
-log4j.appender.debug.File = H:/2/debug.log
-log4j.appender.debug.Append = true
-log4j.appender.debug.Threshold = DEBUG
-log4j.appender.debug.layout = org.apache.log4j.PatternLayout
-log4j.appender.debug.layout.ConversionPattern = %d{yyyy-MM-dd HH:mm:ss a} [Thread: %t][ Class:%c >> Method: %l ]%n%p:%m%n
+log4j.logger.debuglog = debug
+log4j.appender.debuglog = org.apache.log4j.DailyRollingFileAppender
+log4j.appender.debuglog.DatePattern = '_'yyyy-MM-dd'.log'
+log4j.appender.debuglog.File = H:/2/debug.log
+log4j.appender.debuglog.Append = true
+log4j.appender.debuglog.Threshold = DEBUG
+log4j.appender.debuglog.layout = org.apache.log4j.PatternLayout
+log4j.appender.debuglog.layout.ConversionPattern = %d{yyyy-MM-dd HH:mm:ss a} [Thread: %t][ Class:%c >> Method: %l ]%n%p:%m%n
 
 # warn log
 log4j.logger.warn = warn

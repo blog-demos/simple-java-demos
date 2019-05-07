@@ -27,15 +27,15 @@ class MyWindowDemo {
 
         tf = new TextField(63);
 
-        but = new Button("ת��");
+        but = new Button("button1");
 
         ta = new TextArea(25, 70);// ��������������
 
-        d = new Dialog(f, "��ʾ��Ϣ", true);
+        d = new Dialog(f, "dialog1", true);
         d.setBounds(400, 200, 240, 150);
         d.setLayout(new FlowLayout());
         lab = new Label();
-        okBut = new Button("ȷ��");
+        okBut = new Button("ok button");
 
         f.add(tf);
         f.add(but);
