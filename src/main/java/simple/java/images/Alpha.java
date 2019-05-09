@@ -39,7 +39,7 @@ public class Alpha {
 
         g2d.dispose();
         try {
-            FileOutputStream fs = new FileOutputStream("F:/IMG/2.jpg");
+            FileOutputStream fs = new FileOutputStream("src/main/images/1.jpg");
             ImageIO.write(image, "jpg", fs);
         } catch (Exception e) {
             e.printStackTrace();
