@@ -2,7 +2,7 @@ package simple.java.ui;
 
 import javax.swing.JFrame;
 
-import org.core.utils.threads.ThreadUtils;
+import pers.hai.util.commons.threads.ThreadUtils;
 
 public class MainFrame {
 

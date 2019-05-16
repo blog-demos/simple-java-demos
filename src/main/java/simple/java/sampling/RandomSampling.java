@@ -3,9 +3,9 @@ package simple.java.sampling;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.core.utils.logs.LogUtils;
-import org.core.utils.nums.RandomUtils;
-import org.core.utils.threads.ThreadUtils;
+import pers.hai.util.commons.logs.LogUtils;
+import pers.hai.util.commons.nums.RandomUtils;
+import pers.hai.util.commons.threads.ThreadUtils;
 
 /**
  * <p>

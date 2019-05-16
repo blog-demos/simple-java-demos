@@ -1,7 +1,7 @@
 package simple.java.cipher.rsa;
 
-import org.core.utils.files.FileReadUtils;
-import org.core.utils.nums.RandomUtils;
+import pers.hai.util.commons.io.FileIO;
+import pers.hai.util.commons.nums.RandomUtils;
 
 import java.io.IOException;
 import java.util.Arrays;
@@ -100,7 +100,7 @@ public class RSA {
 
         List<String> primeLabels = null;
         try {
-            primeLabels = FileReadUtils.readLines("./data/prime_table");
+            primeLabels = FileIO.readLines("./data/prime_table");
         } catch (IOException e) {
             e.printStackTrace();
         }

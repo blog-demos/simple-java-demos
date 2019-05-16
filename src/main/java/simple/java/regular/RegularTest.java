@@ -1,6 +1,6 @@
 package simple.java.regular;
 
-import org.core.utils.str.StringUtils;
+import pers.hai.util.commons.str.StringUtils;
 
 public class RegularTest {
 

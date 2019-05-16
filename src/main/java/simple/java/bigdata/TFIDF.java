@@ -1,8 +1,8 @@
 package simple.java.bigdata;
 
-import org.core.utils.files.FileReadUtils;
-import org.core.utils.files.FileSearchUtils;
+import pers.hai.util.commons.io.FileIO;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -51,10 +51,10 @@ public class TFIDF {
     }
     
     private Map<String, List<String>> readData() throws IOException {
-        Map<String, List<String>> data = new HashMap<String, List<String>>();
-        String[] fileNames = FileSearchUtils.getAllFileFullName(dataPath);
-        for (String fileName : fileNames) {
-            data.put(fileName, FileReadUtils.readLines(fileName));
+        Map<String, List<String>> data = new HashMap<>();
+        File[] files = FileIO.listFiles(dataPath);
+        for (File file : files) {
+            data.put(file.getPath(), FileIO.readLines(file.getPath()));
         }
         return data;
     }

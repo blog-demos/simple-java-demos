@@ -1,6 +1,6 @@
 package simple.java.array;
 
-import org.core.utils.nums.RandomUtils;
+import pers.hai.util.commons.nums.RandomUtils;
 
 import java.util.ArrayList;
 import java.util.List;

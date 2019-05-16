@@ -13,8 +13,6 @@ import javax.imageio.ImageReadParam;
 import javax.imageio.ImageReader;
 import javax.imageio.stream.ImageInputStream;
 
-import org.core.utils.interf.UtilsInterface;
-
 /**
  * <p>
  * 图像剪刀
@@ -29,7 +27,7 @@ import org.core.utils.interf.UtilsInterface;
  *      lemon_tree12138</a>
  * @version 0.1.1
  */
-public class ImageScissors implements UtilsInterface {
+public class ImageScissors {
 
     private static ImageScissors imageScissors = null;
     
@@ -150,15 +148,5 @@ public class ImageScissors implements UtilsInterface {
      */
     public void save(String targetPath) throws IOException {
         ImageIO.write(targetImage, "jpg", new File(targetPath));
-    }
-
-    @Override
-    public String getTag() {
-        return getClass().getName();
-    }
-
-    @Override
-    public void description() {
-        System.out.println("这是一个图片剪切的工具类");
     }
 }

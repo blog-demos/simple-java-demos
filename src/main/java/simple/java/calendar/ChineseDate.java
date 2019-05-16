@@ -1,6 +1,6 @@
 package simple.java.calendar;
 
-import org.core.utils.time.TimeUtils;
+import pers.hai.util.commons.datetime.CalendarUtils;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -367,7 +367,7 @@ public class ChineseDate {
 
     public static String oneDay(int year, int month, int day) {
         Calendar today = Calendar.getInstance(Locale.SIMPLIFIED_CHINESE);
-        Calendar c = TimeUtils.CalendarUtils.yesterday(today);
+        Calendar c = CalendarUtils.yesterday(today);
         
         long[] l = calElement(year, month, day);
         StringBuffer sToday = new StringBuffer();

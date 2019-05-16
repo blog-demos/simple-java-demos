@@ -1,6 +1,6 @@
 package simple.java.matrix2;
 
-import org.core.utils.logs.LogUtils;
+import pers.hai.util.commons.logs.LogUtils;
 
 /**
  * 矩阵变换

@@ -2,7 +2,7 @@ package simple.java.thread.returnvalue;
 
 import java.util.concurrent.Callable;
 
-import org.core.utils.threads.ThreadUtils;
+import pers.hai.util.commons.threads.ThreadUtils;
 
 public class TaskCallable implements Callable<Integer> {
 

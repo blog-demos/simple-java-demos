@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.core.utils.nums.RandomUtils;
+import pers.hai.util.commons.nums.RandomUtils;
 
 public class HashObject implements Serializable {
     

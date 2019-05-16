@@ -1,6 +1,6 @@
 package simple.java.thread.returnvalue;
 
-import org.core.utils.threads.ThreadUtils;
+import pers.hai.util.commons.threads.ThreadUtils;
 
 public class TaskRunnable implements Runnable {
 

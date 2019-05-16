@@ -8,7 +8,7 @@ import java.io.FileOutputStream;
 import java.io.OutputStream;
 import javax.imageio.ImageIO;
 
-import org.core.utils.files.FileSearchUtils;
+import pers.hai.util.commons.io.FileIO;
 
 public class MakeOver {
 
@@ -35,12 +35,12 @@ public class MakeOver {
             MakeOver abc = new MakeOver(); // 实例化图片合成类
 //            String path3 = ""; // 动态图片地址
             
-            String[] parts = FileSearchUtils.getAllFileFullName(path2);
-            for (String imgPath : parts) {
-                System.out.println(imgPath);
-                BufferedImage im = abc.pressImage(imgPath, path1, weidth, height);
-                e.addFrame(im);// 循环加入Frame
-            }
+            //String[] parts = FileSearchUtils.getAllFileFullName(path2);
+            //for (String imgPath : parts) {
+            //    System.out.println(imgPath);
+            //    BufferedImage im = abc.pressImage(imgPath, path1, weidth, height);
+            //    e.addFrame(im);// 循环加入Frame
+            //}
             
 //            for (int i = 1; i < 3; i++) { // 此处只添加 2 张gif图片
 //                path3 = path2 + i + ".gif";

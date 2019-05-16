@@ -3,7 +3,7 @@ package simple.java.thread.deadlock;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.ReentrantLock;
 
-import org.core.utils.threads.ThreadUtils;
+import pers.hai.util.commons.threads.ThreadUtils;
 
 public class ResourcesB {
 

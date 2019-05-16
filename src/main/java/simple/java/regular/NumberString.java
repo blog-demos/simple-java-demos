@@ -1,7 +1,7 @@
 package simple.java.regular;
 
-import org.core.utils.logs.LogUtils;
-import org.core.utils.str.StringUtils;
+import pers.hai.util.commons.logs.LogUtils;
+import pers.hai.util.commons.str.StringUtils;
 
 /**
  * <p>

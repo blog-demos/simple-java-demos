@@ -1,6 +1,6 @@
 package simple.java.num;
 
-import org.core.utils.logs.LogUtils;
+import pers.hai.util.commons.logs.LogUtils;
 
 /**
  * <p>

@@ -1,8 +1,8 @@
 package simple.java.algor;
 
-import org.core.utils.containers.ArrayUtils;
-import org.core.utils.sort.impl.QKSort;
-import org.core.utils.sort.poke.SortUtils;
+import pers.hai.util.commons.containers.ArrayUtils;
+import pers.hai.util.commons.sort.impl.QKSort;
+import pers.hai.util.commons.sort.poke.SortUtils;
 
 import java.util.Arrays;
 

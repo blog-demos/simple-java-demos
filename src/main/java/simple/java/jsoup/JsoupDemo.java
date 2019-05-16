@@ -4,9 +4,9 @@ import java.io.IOException;
 
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
-import org.core.utils.logs.LogUtils;
-import org.core.utils.web.impl.WebHTMLParserImpl;
-import org.core.utils.web.poke.HTMLParserUtils;
+import pers.hai.util.commons.logs.LogUtils;
+import pers.hai.util.commons.web.impl.WebHTMLParserImpl;
+import pers.hai.util.commons.web.poke.HTMLParserUtils;
 
 public class JsoupDemo {
 

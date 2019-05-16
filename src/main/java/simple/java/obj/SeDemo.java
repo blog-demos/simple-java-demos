@@ -1,6 +1,6 @@
 package simple.java.obj;
 
-import org.core.utils.obj.SerializationUtils;
+import pers.hai.util.commons.obj.SerializationUtils;
 
 public class SeDemo {
 

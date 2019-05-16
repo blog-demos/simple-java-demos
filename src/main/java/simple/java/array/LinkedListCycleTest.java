@@ -1,6 +1,6 @@
 package simple.java.array;
 
-import org.core.utils.logs.LogUtils;
+import pers.hai.util.commons.logs.LogUtils;
 
 import java.util.LinkedList;
 import java.util.List;

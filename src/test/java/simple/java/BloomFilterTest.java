@@ -1,7 +1,7 @@
 package simple.java;
 
 import org.apache.log4j.Logger;
-import org.core.utils.obj.SerializationUtils;
+import pers.hai.util.commons.obj.SerializationUtils;
 import org.junit.Test;
 import simple.java.bloom.BloomFilter;
 

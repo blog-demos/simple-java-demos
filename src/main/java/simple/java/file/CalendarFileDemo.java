@@ -4,9 +4,9 @@ import java.io.IOException;
 import java.util.Calendar;
 import java.util.Date;
 
-import org.core.utils.files.FileUtils;
-import org.core.utils.str.StringUtils;
-import org.core.utils.time.TimeUtils;
+import pers.hai.util.commons.io.FileIO;
+import pers.hai.util.commons.str.StringUtils;
+import pers.hai.util.commons.datetime.CalendarUtils;
 
 /**
  * <p>
@@ -33,7 +33,7 @@ public class CalendarFileDemo {
         int day_index = 0;
         while((day_index++) < DAYS_OF_YEAR) {
             createFile(calendar);
-            calendar = TimeUtils.CalendarUtils.afterSomeDays(calendar, 1);
+            calendar = CalendarUtils.afterSomeDays(calendar, 1);
         }
     }
     
@@ -63,7 +63,7 @@ public class CalendarFileDemo {
         String year = StringUtils.formatIntegerString(calendar.get(Calendar.YEAR), "#0000");
         String month = StringUtils.formatIntegerString(calendar.get(Calendar.MONTH) + 1, "#00");
         String date = StringUtils.formatIntegerString(calendar.get(Calendar.DATE), "#00");
-        int week = TimeUtils.CalendarUtils.getWeek(calendar);
+        int week = CalendarUtils.getWeek(calendar);
 
         if (isWeekendDay(week)) {
             return;
@@ -73,7 +73,7 @@ public class CalendarFileDemo {
         String fileName = year + "-" + month + "-" + date + " " + WEEK[week] + ".txt";
         
         try {
-            FileUtils.createFullFile(folder + "/" + fileName);
+            FileIO.createNewFile(folder + "/" + fileName);
         } catch (IOException e) {
             e.printStackTrace();
         }

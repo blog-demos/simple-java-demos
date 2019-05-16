@@ -1,6 +1,6 @@
 package simple.java.array;
 
-import org.core.utils.logs.LogUtils;
+import pers.hai.util.commons.logs.LogUtils;
 
 /**
  * 测试Array遍历方式的效率

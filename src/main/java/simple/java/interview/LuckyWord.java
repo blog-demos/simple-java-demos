@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import org.core.utils.nums.NumberUtils;
+import pers.hai.util.commons.nums.NumberUtils;
 
 /**
  * <p>

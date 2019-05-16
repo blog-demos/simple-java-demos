@@ -1,7 +1,7 @@
 package simple.java.copy;
 
-import org.core.utils.nums.RandomUtils;
-import org.core.utils.obj.SerializationUtils;
+import pers.hai.util.commons.nums.RandomUtils;
+import pers.hai.util.commons.obj.SerializationUtils;
 
 public class CopyObjectTest {
 

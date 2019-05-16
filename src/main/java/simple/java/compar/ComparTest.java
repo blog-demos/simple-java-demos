@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import org.core.utils.logs.LogUtils;
+import pers.hai.util.commons.logs.LogUtils;
 
 /**
  * 测试对象排序

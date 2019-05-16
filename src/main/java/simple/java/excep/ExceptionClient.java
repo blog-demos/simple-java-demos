@@ -3,7 +3,7 @@ package simple.java.excep;
 import java.util.ArrayList;
 import java.util.List;
 
-import org.core.utils.logs.LogUtils;
+import pers.hai.util.commons.logs.LogUtils;
 
 public class ExceptionClient {
 

@@ -7,7 +7,7 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-import org.core.utils.math.MathUtils;
+import pers.hai.util.commons.math.MathUtils;
 
 /**
  * <p>

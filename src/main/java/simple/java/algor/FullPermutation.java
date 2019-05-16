@@ -1,6 +1,6 @@
 package simple.java.algor;
 
-import org.core.utils.containers.ArrayUtils;
+import pers.hai.util.commons.containers.ArrayUtils;
 
 import java.util.Arrays;
 
