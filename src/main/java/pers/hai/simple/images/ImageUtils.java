@@ -10,7 +10,7 @@ import java.io.FileOutputStream;
 
 import javax.imageio.ImageIO;
 
-import pers.hai.util.commons.images.TypeTransfromUtils;
+import pers.hai.util.commons.image.TypeTransfromUtils;
 
 //import com.sun.image.codec.jpeg.JPEGCodec;
 //import com.sun.image.codec.jpeg.JPEGImageEncoder;

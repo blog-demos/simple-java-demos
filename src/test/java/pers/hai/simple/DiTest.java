@@ -2,7 +2,6 @@ package pers.hai.simple;
 
 import org.junit.Test;
 import pers.hai.simple.di.*;
-import simple.java.di.*;
 
 /**
  * @Author: Q-WHai
