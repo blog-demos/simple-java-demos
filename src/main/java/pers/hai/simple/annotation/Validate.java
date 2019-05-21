@@ -16,7 +16,7 @@ import java.lang.annotation.*;
 @Target({ElementType.FIELD, ElementType.METHOD})
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Validate {
-    public int min() default 1;
-    public int max() default 10;
-    public boolean isNotNull() default true;
+    int min() default 1;
+    int max() default 10;
+    boolean isNotNull() default true;
 }
