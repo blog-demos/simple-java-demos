@@ -1,6 +1,5 @@
 package pers.hai.simple;
 
-import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -13,9 +12,7 @@ import java.util.Stack;
  * @Author: Q-WHai
  * @Date: Created in 14:45 2019/05/06
  */
-public class StackTest {
-
-    private final Logger logger = Logger.getLogger(StackTest.class);
+public class StackTest extends Testable {
 
     @Test
     public void test1() {

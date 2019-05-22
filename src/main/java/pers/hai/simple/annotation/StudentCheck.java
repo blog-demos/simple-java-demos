@@ -1,5 +1,7 @@
 package pers.hai.simple.annotation;
 
+import org.apache.log4j.Logger;
+
 import java.lang.reflect.Field;
 
 /**
@@ -13,75 +15,60 @@ import java.lang.reflect.Field;
  */
 public class StudentCheck {
 
+    private static final Logger logger = Logger.getLogger(StudentCheck.class);
+
     public static boolean check(Student student) {
-        if (student == null) {
-            System.out.println("！！校验对象为空！！");
+        if (null == student) {
+            logger.warn("Object student is NullPoint.");
             return false;
         }
 
-        // 获取User类的所有属性（如果使用getFields，就无法获取到private的属性）
-        Field[] fields = User.class.getDeclaredFields();
-
+        // 获取Student类的所有属性（如果使用getFields，就无法获取到private的属性）
+        Field[] fields = Student.class.getDeclaredFields();
+        boolean flag = true;
         for (Field field : fields) {
-            // 如果属性有注解，就进行校验
-            if (field.isAnnotationPresent(Validate.class)) {
-                Validate validate = field.getAnnotation(Validate.class);
-                if (field.getName().equals("age")) {
-                    if (student.getAge() == null) {
-                        if (validate.isNotNull()) {
-                            System.out.println("！！年龄可空校验不通过：不可为空！！");
-                            return false;
-                        } else {
-                            System.out.println("年龄可空校验通过：可以为空");
-                            continue;
-                        }
-                    } else {
-                        System.out.println("年龄可空校验通过");
-                    }
-
-                    if (student.getAge().length() < validate.min()) {
-                        System.out.println("！！年龄最小长度校验不通过！！");
-                        return false;
-                    } else {
-                        System.out.println("年龄最小长度校验通过");
-                    }
-
-                    if (student.getAge().length() > validate.max()) {
-                        System.out.println("！！年龄最大长度校验不通过！！");
-                        return false;
-                    } else {
-                        System.out.println("年龄最大长度校验通过");
-                    }
-                }
-                if (field.getName().equals("name")) {
-                    if (student.getName() == null) {
-                        if (validate.isNotNull()) {
-                            System.out.println("！！名字可空校验不通过：不可为空！！");
-                            return false;
-                        } else {
-                            System.out.println("名字可空校验通过：可以为空");
-                            continue;
-                        }
-                    } else {
-                        System.out.println("名字可空校验通过");
-                    }
-
-                    if (student.getName().length() < validate.min()) {
-                        System.out.println("！！名字最小长度校验不通过！！");
-                        return false;
-                    } else {
-                        System.out.println("名字最小长度校验通过");
-                    }
-
-                    if (student.getName().length() > validate.max()) {
-                        System.out.println("！！名字最大长度校验不通过！！");
-                        return false;
-                    } else {
-                        System.out.println("名字最大长度校验通过");
-                    }
-                }
+            if (field.getName().equals("name")) {
+                flag = flag & checkName(student.getName(), field);
+            } else if (field.getName().equals("age")) {
+                flag = flag & checkAge(student.getAge(), field);
             }
         }
+
+        return flag;
+    }
+
+    private static boolean checkName(String name, Field field) {
+        NameValidate validate = field.getAnnotation(NameValidate.class);
+
+        if (null == name) {
+            logger.info(String.format("%s", validate.isNotNull() ? "姓名不可为空，校验不通过" : "姓名空校验通过：允许空"));
+            return !validate.isNotNull();
+        } else
+            logger.info("姓名不为空，校验通过");
+
+        if (name.length() < validate.minLength()) {
+            logger.warn(String.format("姓名最小长度为：%d，当前长度过小", validate.minLength()));
+            return false;
+        } else if (name.length() > validate.maxLength()) {
+            logger.warn(String.format("姓名最大长度为：%d，当前长度过大", validate.maxLength()));
+            return false;
+        } else
+            logger.info("姓名长度合法，校验通过");
+
+        return true;
+    }
+
+    private static boolean checkAge(int age, Field field) {
+        AgeValidate validate = field.getAnnotation(AgeValidate.class);
+
+        if (age < validate.min()) {
+            logger.warn(String.format("最小年龄为：%d，当前年龄已低于最小年龄", validate.min()));
+            return false;
+        } else if (age > validate.max()) {
+            logger.warn(String.format("最大年龄为：%d，当前年龄已高于最大年龄", validate.max()));
+            return false;
+        } else
+            logger.info("年龄大小合法，校验通过");
 
         return true;
     }

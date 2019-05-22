@@ -1,7 +1,7 @@
 package pers.hai.simple.copy;
 
 import pers.hai.util.commons.nums.RandomUtils;
-import pers.hai.util.commons.obj.SerializationUtils;
+import pers.hai.util.commons.obj.PersistenceUtils;
 
 public class CopyObjectTest {
 
@@ -51,9 +51,9 @@ public class CopyObjectTest {
         long startTime = System.currentTimeMillis();
         
         Person2 person = new Person2("小明", 15);
-        SerializationUtils.writeObject(person, path);
+        PersistenceUtils.writeObject(person, path);
         for (int i = 0; i < CYCLE_TIMES; i++) {
-            SerializationUtils.readObject(path);
+            PersistenceUtils.readObject(path);
         }
         
         System.out.println("Serialization生成对象耗时：" + (System.currentTimeMillis() - startTime) + "ms");

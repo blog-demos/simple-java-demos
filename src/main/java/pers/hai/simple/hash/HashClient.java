@@ -1,6 +1,6 @@
 package pers.hai.simple.hash;
 
-import pers.hai.util.commons.obj.SerializationUtils;
+import pers.hai.util.commons.obj.PersistenceUtils;
 
 public class HashClient {
 
@@ -8,9 +8,9 @@ public class HashClient {
         
         HashObject object = new HashObject();
         object.add("ABC", 3);
-        SerializationUtils.writeObject(object, "F:/Temp/hash.obj");
+        PersistenceUtils.writeObject(object, "F:/Temp/hash.obj");
         
-        HashObject readObject = (HashObject) SerializationUtils.readObject("F:/Temp/hash.obj");
+        HashObject readObject = (HashObject) PersistenceUtils.readObject("F:/Temp/hash.obj");
         
         boolean b1 = readObject.contains("baidu");
         boolean b2 = readObject.contains("google");

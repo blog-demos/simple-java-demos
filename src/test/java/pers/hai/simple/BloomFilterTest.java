@@ -1,17 +1,14 @@
 package pers.hai.simple;
 
-import org.apache.log4j.Logger;
-import pers.hai.util.commons.obj.SerializationUtils;
 import org.junit.Test;
 import pers.hai.simple.bloom.BloomFilter;
+import pers.hai.util.commons.obj.PersistenceUtils;
 
 /**
  * @Author: Q-WHai
  * @Date: Created in 18:15 2019/05/05
  */
-public class BloomFilterTest {
-
-    private final Logger logger = Logger.getLogger(BloomFilterTest.class);
+public class BloomFilterTest extends Testable {
 
     @Test
     public void test1() {
@@ -37,11 +34,11 @@ public class BloomFilterTest {
         filter.add("hello");
         filter.add("world");
 
-        SerializationUtils.writeObject(filter, path);
+        PersistenceUtils.writeObject(filter, path);
     }
 
     private BloomFilter testReadBloomFilter(String path) {
-        Object object = SerializationUtils.readObject(path);
+        Object object = PersistenceUtils.readObject(path);
         return (BloomFilter)object;
     }
 }

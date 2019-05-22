@@ -11,11 +11,11 @@ package pers.hai.simple.annotation;
  */
 public class Student {
 
-    @Validate(min = 2, max = 5)
+    @NameValidate(minLength = 2, maxLength = 10, isNotNull = false)
     private String name;
 
-    @Validate(isNotNull = false)
-    private String age;
+    @AgeValidate(min = 6, max = 20)
+    private int age;
 
     public String getName()
     {
@@ -27,12 +27,12 @@ public class Student {
         this.name = name;
     }
 
-    public String getAge()
+    public int getAge()
     {
         return age;
     }
 
-    public void setAge(String age)
+    public void setAge(int age)
     {
         this.age = age;
     }

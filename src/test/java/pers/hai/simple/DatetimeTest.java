@@ -1,6 +1,5 @@
 package pers.hai.simple;
 
-import org.apache.log4j.Logger;
 import org.junit.Test;
 
 import java.text.DateFormat;
@@ -16,9 +15,7 @@ import java.util.Date;
  * @author Q-WHai
  * @see <a href="https://github.com/qwhai">https://github.com/qwhai</a>
  */
-public class DatetimeTest {
-
-    private final Logger logger = Logger.getLogger(DatetimeTest.class);
+public class DatetimeTest extends Testable {
 
     // 输出格式: Mon May 20 18:02:10 CST 2019
     @Test

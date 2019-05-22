@@ -20,7 +20,7 @@ import java.util.TreeMap;
 import java.util.UUID;
 import java.util.Vector;
 
-import pers.hai.util.commons.obj.SerializationUtils;
+import pers.hai.util.commons.obj.PersistenceUtils;
 
 public class DemoUtilapis {
 
@@ -50,9 +50,9 @@ public class DemoUtilapis {
         EventObject object = new EventObject(flyable);
         
         System.out.println(object);
-        
-        SerializationUtils.writeObject(object, "F:/Temp/bird.txt");
-        Object object2 = SerializationUtils.readObject("F:/Temp/bird.txt");
+
+        PersistenceUtils.writeObject(object, "F:/Temp/bird.txt");
+        Object object2 = PersistenceUtils.readObject("F:/Temp/bird.txt");
         System.out.println(object2);
     }
     
