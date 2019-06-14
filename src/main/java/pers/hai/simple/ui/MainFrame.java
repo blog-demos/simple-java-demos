@@ -2,8 +2,6 @@ package pers.hai.simple.ui;
 
 import javax.swing.JFrame;
 
-import pers.hai.util.commons.threads.ThreadUtils;
-
 public class MainFrame {
 
     private JFrame jFrame = null;
@@ -45,11 +43,14 @@ public class MainFrame {
         
         @Override
         public void run() {
-            do {
-                jPanel.modifyLabelText(String.valueOf(System.currentTimeMillis()));
-                jFrame.repaint();
-                ThreadUtils.sleep(1000);
-            } while (true);
+            try {
+                do {
+                    jPanel.modifyLabelText(String.valueOf(System.currentTimeMillis()));
+                    jFrame.repaint();
+                    Thread.sleep(1000);
+                } while (true);
+            } catch (InterruptedException ex) {
+            }
         }
     }
 }
