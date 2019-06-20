@@ -6,6 +6,8 @@ public class Model implements Serializable {
 
     private static final long serialVersionUID = -2743314291826647202L;
 
+    public static final int CONST_1 = 12321;
+
     private int id;
 
     private byte[] bytes;
