@@ -189,7 +189,6 @@ public class HttpTests {
     @Test
     public void testHttpClient3Get() {
         String url = "http://xxx";
-
         InputStream input = null;
         BufferedReader reader = null;
         String result = null;
