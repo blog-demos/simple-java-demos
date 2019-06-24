@@ -7,19 +7,17 @@ import pers.hai.util.commons.sort.poke.SortUtils;
 import java.util.Arrays;
 
 /**
- * <p>
  * 全排列非递归测试
- * </p>
- * Create Date: 2016年3月25日
- * Last Modify: 2016年3月25日
  *
- * @author <a href="http://weibo.com/u/5131020927">Q-WHai</a>
- * @version 0.1.1
- * @see <a href="https://qwhai.blog.csdn.net/">https://qwhai.blog.csdn.net/</a>
+ * Create Date: 2016-03-25
+ * Last Modify: 2019-06-24
+ *
+ * @author Q-WHai
+ * @see <a href="https://github.com/qwhai">https://github.com/qwhai</a>
  */
-public class FullPermutation2 {
+public class FullSortingUnrecursion {
 
-    public void permutation(int[] array) {
+    public void sorting(int[] array) {
         // 先排序
         SortUtils sortUtils = new SortUtils(new QKSort());
         sortUtils.sort(array);
@@ -46,11 +44,9 @@ public class FullPermutation2 {
 
         // 寻找在替换点后面的次小元素
         int biggerCursor = cursor + 1;
-        for (int i = cursor + 1; i < length; i++) {
-            if (array[cursor] < array[i] && array[i] < array[biggerCursor]) {
+        for (int i = cursor + 1; i < length; i++)
+            if (array[cursor] < array[i] && array[i] < array[biggerCursor])
                 biggerCursor = i;
-            }
-        }
 
         // 交换
         ArrayUtils.swap(array, cursor, biggerCursor);
@@ -63,19 +59,17 @@ public class FullPermutation2 {
 
     private void reverse(int[] array, int cursor) {
         int end = array.length - 1;
-        for (int i = cursor + 1; i <= end; i++, end--) {
+        for (int i = cursor + 1; i <= end; i++, end--)
             ArrayUtils.swap(array, i, end);
-        }
     }
 
     // 是否是最大的序列
     private boolean isLast(int[] array) {
         int length = array.length;
-        for (int i = 1; i < length; i++) {
-            if (array[i - 1] < array[i]) {
+        for (int i = 1; i < length; i++)
+            if (array[i - 1] < array[i])
                 return false;
-            }
-        }
+
         return true;
     }
 }
