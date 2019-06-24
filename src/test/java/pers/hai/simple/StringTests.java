@@ -46,4 +46,11 @@ public class StringTests {
         System.out.println(s1 == s3);
         System.out.println(s2 == s3);
     }
+
+    @Test
+    public void test4() {
+        String s = "Hello";
+        StringBuilder sb = new StringBuilder(s);
+        System.out.println(sb.reverse());
+    }
 }
