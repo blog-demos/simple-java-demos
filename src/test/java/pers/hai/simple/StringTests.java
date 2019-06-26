@@ -53,4 +53,22 @@ public class StringTests {
         StringBuilder sb = new StringBuilder(s);
         System.out.println(sb.reverse());
     }
+
+    @Test
+    public void test5() {
+        String s = "Hello";
+        StringBuffer sb = new StringBuffer(s);
+        System.out.println(sb.reverse());
+    }
+
+    @Test
+    public void test6() {
+        StringBuffer sb = new StringBuffer();
+        System.out.println(String.format("toStringCache: %s", sb));
+
+        sb.append("Hello-world");
+        System.out.println(String.format("toStringCache: %s", sb));
+        sb.append("Hello-world2");
+        System.out.println(String.format("toStringCache: %s", sb));
+    }
 }

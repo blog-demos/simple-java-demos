@@ -13,6 +13,7 @@ public class Student {
 
     private String name;
     private int age;
+    private transient String address; // transient修饰此字段不需要序列化
 
     public String getName() {
         return name;
@@ -30,9 +31,17 @@ public class Student {
         this.age = age;
     }
 
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     @Override
     public int hashCode() {
-        return String.format("%s|%d", getName(), getAge()).hashCode();
+        return String.format("%s|%d|%d", getName(), getAge(), getAddress()).hashCode();
     }
 
     @Override
