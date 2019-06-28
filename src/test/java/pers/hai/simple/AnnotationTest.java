@@ -1,9 +1,7 @@
 package pers.hai.simple;
 
 import org.junit.Test;
-import pers.hai.simple.annotation.EncryptMode;
-import pers.hai.simple.annotation.Student;
-import pers.hai.simple.annotation.StudentCheck;
+import pers.hai.simple.annotation.*;
 import pers.hai.util.commons.scan.ClassScanning;
 
 import java.lang.reflect.Field;
@@ -57,5 +55,11 @@ public class AnnotationTest extends Testable {
                 }
             }
         });
+    }
+
+    @Test
+    public void anntationMethod2() {
+        EncryptCheck check = new EncryptCheck();
+        logger.info(String.format("result = %s", check.encrypt(new Encrypt())));
     }
 }

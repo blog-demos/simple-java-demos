@@ -9,7 +9,6 @@ package pers.hai.simple.annotation;
  * @author Q-WHai
  * @see <a href="https://github.com/qwhai">https://github.com/qwhai</a>
  */
-@EncryptMode
 public class HttpRequest {
 
     @EncryptMode(type = EncryptType.SHA1)

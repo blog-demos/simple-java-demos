@@ -13,7 +13,7 @@ import java.lang.annotation.*;
  */
 @Documented
 @Inherited
-@Target({ ElementType.TYPE, ElementType.METHOD })
+@Target({ ElementType.METHOD })
 @Retention(RetentionPolicy.RUNTIME)
 public @interface EncryptMode {
     EncryptType type() default EncryptType.MD5;
